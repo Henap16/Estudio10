@@ -1,0 +1,143 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ 
+/*Menu*/
+
+.navegacion {
+    width: auto;
+    height: 83px;
+    background: #369FCF;
+    border: 5px solid #1789BE;
+}
+
+.navegacion ul {
+    list-style: none;
+}
+
+.menu > li {
+    position: relative;
+    display: inline-block;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 23px 50px;
+    height: 73px;
+    color: white;
+    font-family: "Arial";
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: gold;
+    border: 3px solid gold;
+    background: #1789BE;
+    transition: all.3s;
+}
+
+.submenu {
+    position: absolute;
+    width: 179px;
+    visibility: hidden;
+    border-left: 5px solid #1789BE;
+    border-right: 5px solid #1789BE;
+    border-bottom: 5px solid #1789BE;
+    background: #369FCF;
+
+}
+
+.submenu > li > a{
+    display: block;
+    padding: 20px 55px;
+    color: white;
+    font-family: "Arial";
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.menu  li:hover > .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.clases {
+    position: absolute;
+    background: #31C25F;
+    visibility: hidden;
+    border: 5px solid #2CA753;
+    right:-187px;
+    top: 0px;
+}
+
+.clases > li > a{
+    display: block;
+    padding: 20px 55px;
+    color: white;
+    font-family: "Arial";
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.clases li a:hover {
+    background: #23783E;
+}
+
+.submenu  li:hover > .clases {
+    visibility: visible;
+    opacity: 1;     
+}
+
+
+/*Cambiar el tema*/
+
+
+body.dark {
+    color: white;
+	background: #1F1F23;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-image: url(../images/oscuro.jpg);
+	border-radius: 50px;
+	cursor: pointer;
+	display: block;
+    position: absolute;
+	right: 1%;
+    top: 2%;
+	justify-content: 64px;
+	padding: 5px;
+	height: 36px;
+	width: 69px;
+    border: 3px inset gold;
+}
+
+.label .ball {
+	background-color: #FCE100;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 3px;
+	height: 26px;
+	width: 26px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(31px);
+    background-color: #757575;
+}
